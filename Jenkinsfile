@@ -18,8 +18,6 @@ pipeline {
                     loadLibrary()
                     env['MAVEN_VERSION_NUMBER'] = getMavenVersion 'pmgr/job/master', params.BUILD_VERSION_PREFIX, params.BUILDS_OFFSET
                 }
-                
-                sh '/usr/local/bin/mvn --batch-mode release:update-versions -DautoVersionSubmodules=true -DdevelopmentVersion=$MAVEN_VERSION_NUMBER'
             }
         }
         
