@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage ('Build') {
             steps {
-                sh 'mvn package' 
+                sh '/usr/local/bin/mvn package' 
             }
             post {
                 success {
