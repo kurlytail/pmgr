@@ -1,0 +1,12 @@
+[submodule "pmgr-app"]
+	path = pmgr-app
+	url = git@github.com:kurlytail/pmgr-app
+[submodule "spring-deps"]
+	path = spring-deps
+	url = git@github.com:kurlytail/spring-deps
+[submodule "user-registration"]
+	path = user-registration
+	url = git@github.com:kurlytail/user-registration
+[submodule "user-authentication"]
+	path = user-authentication
+	url = git@github.com:kurlytail/user-authentication
