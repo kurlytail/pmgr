@@ -1,7 +1,6 @@
 pipeline {
-    agent {
-        label 'mvn'
-    }
+
+    agent none
     
     parameters {
         string(defaultValue: "0.0", description: 'Build version prefix', name: 'BUILD_VERSION_PREFIX')
@@ -10,6 +9,10 @@ pipeline {
 
     stages {
         stage('Prepare env') {
+            agent {
+                label 'master'
+            }
+            
             steps {
                 script {
                     loadLibrary()
@@ -19,10 +22,25 @@ pipeline {
                 sh '/usr/local/bin/mvn --batch-mode release:update-versions -DautoVersionSubmodules=true -DdevelopmentVersion=$MAVEN_VERSION_NUMBER'
             }
         }
+        
+        stage('Setup versions') {
+            agent {
+                label 'mvn'
+            }
+            
+            steps {
+                sh '/usr/local/bin/mvn --batch-mode release:update-versions -DautoVersionSubmodules=true -DdevelopmentVersion=$MAVEN_VERSION_NUMBER'
+            }
+        }
         stage ('Build') {
+            agent {
+                label 'mvn'
+            }
+            
             steps {
                 sh '/usr/local/bin/mvn package' 
             }
+            
             post {
                 success {
                     junit '**/surefire-reports/*.xml' 
