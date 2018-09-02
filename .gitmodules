@@ -1,15 +1,15 @@
 [submodule "pmgr-app"]
 	path = pmgr-app
-	url = git@github.com:kurlytail/pmgr-app
+	url = https://github.com/kurlytail/pmgr-app
 [submodule "spring-deps"]
 	path = spring-deps
-	url = git@github.com:kurlytail/spring-deps
+	url = https://github.com/kurlytail/spring-deps
 [submodule "user-registration"]
 	path = user-registration
-	url = git@github.com:kurlytail/user-registration
+	url = https://github.com/kurlytail/user-registration
 [submodule "user-authentication"]
 	path = user-authentication
-	url = git@github.com:kurlytail/user-authentication
+	url = https://github.com/kurlytail/user-authentication
 [submodule "jenkins"]
 	path = jenkins
-	url = git@github.com:kurlytail/jenkins-lib
+	url = https://github.com/kurlytail/jenkins-lib
