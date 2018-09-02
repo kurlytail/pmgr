@@ -16,26 +16,18 @@ pipeline {
             steps {
                 script {
                     loadLibrary()
-                    env['MAVEN_VERSION_NUMBER'] = getMavenVersion 'pmgr/job/master', params.BUILD_VERSION_PREFIX, params.BUILDS_OFFSET
+                    env['MAVEN_VERSION_NUMBER'] = getMavenVersion 'kurlytail/pmgr/master', params.BUILD_VERSION_PREFIX, params.BUILDS_OFFSET
                 }
             }
         }
         
-        stage('Setup versions') {
-            agent {
-                label 'mvn'
-            }
-            
-            steps {
-                sh '/usr/local/bin/mvn --batch-mode release:update-versions -DautoVersionSubmodules=true -DdevelopmentVersion=$MAVEN_VERSION_NUMBER'
-            }
-        }
         stage ('Build') {
             agent {
                 label 'mvn'
             }
             
             steps {
+                sh '/usr/local/bin/mvn --batch-mode release:update-versions -DautoVersionSubmodules=true -DdevelopmentVersion=$MAVEN_VERSION_NUMBER'
                 sh '/usr/local/bin/mvn package' 
             }
             
