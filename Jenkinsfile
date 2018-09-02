@@ -1,5 +1,7 @@
 pipeline {
-    agent mvn
+    agent {
+        label 'mvn'
+    }
 
     stages {
         stage ('Build') {
