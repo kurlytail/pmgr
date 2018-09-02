@@ -12,7 +12,7 @@ pipeline {
         stage('Prepare env') {
             steps {
                 script {
-                    loadLocalLibrary()
+                    loadLibrary()
                     env['MAVEN_VERSION_NUMBER'] = getMavenVersion 'pmgr/job/master', params.BUILD_VERSION_PREFIX, params.BUILDS_OFFSET
                 }
                 
