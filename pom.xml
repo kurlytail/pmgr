@@ -1,15 +1,24 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.bst</groupId>
-  <artifactId>pmgr</artifactId>
-  <version>0.0.1</version>
-  <packaging>pom</packaging>
-  <name>pmgr</name>
+    <modelVersion>4.0.0</modelVersion>
+    
+    <groupId>com.bst</groupId>
+    <artifactId>pmgr</artifactId>
+    <version>0.0.3-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>Project Manager</name>
 
-  <modules>
-    <module>spring-deps</module>
-    <module>pmgr-app</module>
-    <module>user-authentication</module>
-    <module>user-registration</module>
-  </modules>
+    <modules>
+        <module>spring-deps</module>
+        <module>pmgr-app</module>
+        <module>user-authentication</module>
+        <module>user-registration</module>
+    </modules>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.4.RELEASE</version>
+    </parent>
+    <scm>
+        <url>https://www.github.com/kurlytail/pmgr</url>
+    </scm>
 </project>
