@@ -10,3 +10,6 @@
 [submodule "user-authentication"]
 	path = user-authentication
 	url = git@github.com:kurlytail/user-authentication
+[submodule "jenkins"]
+	path = jenkins
+	url = git@github.com:kurlytail/jenkins-lib
