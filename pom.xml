@@ -13,7 +13,6 @@
         <module>user-authentication</module>
         <module>user-registration</module>
         <module>utility-lib</module>
-        <module>pmgr-entities</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
