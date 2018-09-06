@@ -16,3 +16,6 @@
 [submodule "utility-lib"]
 	path = utility-lib
 	url = https://github.com/kurlytail/utility-lib
+[submodule "pmgr-entities"]
+	path = pmgr-entities
+	url = https://github.com/kurlytail/pmgr-entities
