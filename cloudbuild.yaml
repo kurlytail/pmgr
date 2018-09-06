@@ -1,4 +1,6 @@
 steps:
+- name: 'ubuntu'
+  args: ['pwd']
 - name: 'gcr.io/cloud-builders/git'
   args: ['submodule', 'update', '--recursive']
 - name: 'gcr.io/cloud-builders/mvn'
