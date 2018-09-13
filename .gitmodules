@@ -19,3 +19,6 @@
 [submodule "pmgr-entities"]
 	path = pmgr-entities
 	url = https://github.com/kurlytail/pmgr-entities
+[submodule "pmgr-generic"]
+	path = pmgr-generic
+	url = https://github.com/kurlytail/pmgr-generic
