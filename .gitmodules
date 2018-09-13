@@ -22,3 +22,6 @@
 [submodule "pmgr-generic"]
 	path = pmgr-generic
 	url = https://github.com/kurlytail/pmgr-generic
+[submodule "pmgr-organization"]
+	path = pmgr-organization
+	url = https://github.com/kurlytail/pmgr-organization
