@@ -31,6 +31,7 @@ pipeline {
                 sh '/usr/local/bin/mvn package' 
                 script {
                     if(env.BUILDING_QA_CANDIDATE == 'true') {
+                        sh "curl 'http://admin:password@localhost:9080/manager/text/undeploy?path=/pmgr-app'"
                         sh "curl --upload-file pmgr-app/target/pmgr-app.war 'http://admin:password@localhost:9080/manager/text/deploy?path=/pmgr-app&update=true'"
                     }
                 }
