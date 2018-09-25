@@ -27,4 +27,17 @@
     <scm>
         <url>https://www.github.com/kurlytail/pmgr</url>
     </scm>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>org.codehaus.plexus:versions-maven-plugin</exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
