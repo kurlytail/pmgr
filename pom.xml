@@ -26,6 +26,8 @@
     </parent>
     <scm>
         <url>https://www.github.com/kurlytail/pmgr</url>
+        <connection>https://www.github.com/kurlytail/pmgr</connection>
+        <developerConnection>https://www.github.com/kurlytail/pmgr</developerConnection>
     </scm>
     <build>
         <plugins>
